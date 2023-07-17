@@ -14,7 +14,7 @@ metadata:
     appstudio.openshift.io/component: partner-catalog
     pipelines.appstudio.openshift.io/type: build
   name: partner-catalog-on-push
-  namespace: rorai-tenant
+  namespace: rorai-preview-tenant
 spec:
   params:
   - name: dockerfile
@@ -22,7 +22,7 @@ spec:
   - name: git-url
     value: '{{repo_url}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/rorai-tenant/partner-catalog/partner-catalog:{{revision}}
+    value: quay.io/redhat-user-workloads/rorai-preview-tenant/partner-catalog/partner-catalog:{{revision}}
   - name: path-context
     value: .
   - name: revision
